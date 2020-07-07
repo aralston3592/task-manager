@@ -5,14 +5,11 @@ from bson.objectid import ObjectId
 if os.path.exists("env.py"):
     import env
 
-MONGODB_URI = os.getenv("MONGO_URI")
-DBS_NAME = "task-manager"
 
 app = Flask(__name__)
 
-# app.config["MONGO_DBNAME"] = 'task-manager'
-# app.config["MONGO_URI"] = 'mongodb+srv://andyralston35:Tmnt3592@myfirstcluster-2yvra.mongodb.net/task-manager?retryWrites=true&w=majority'
-
+app.config["MONGO_DBNAME"] = 'task-manager'
+app.config["MONGO_URI"] = os.getenv("MONGO_URI")
 mongo = PyMongo(app)
 
 
