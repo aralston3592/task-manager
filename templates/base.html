@@ -30,7 +30,19 @@
     <script type="text/javascript"> 
         $(document).ready(function(){
             $('.collapsible').collapsible();
+            $('select').formSelect();
         });
+
+        $(document).ready(function(){
+            $('.datepicker').datepicker();
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.datepicker');
+            var instances = M.Datepicker.init(elems, options);
+        });
+
+
     </script>    
 </body>
 
