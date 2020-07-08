@@ -8,8 +8,9 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
-app.config["MONGO_DBNAME"] = 'task-manager'
+app.config["DBS_NAME"] = 'task_manager'
 app.config["MONGO_URI"] = os.getenv("MONGO_URI")
+
 mongo = PyMongo(app)
 
 
